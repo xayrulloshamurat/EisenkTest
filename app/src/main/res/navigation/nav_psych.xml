@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_psych"
+    app:startDestination="@id/fragmentCategory">
+
+    <fragment
+        android:id="@+id/fragmentCategory"
+        android:name="com.example.eisenktest.FragmentCategory"
+        android:label="FragmentCategory" >
+        <action
+            android:id="@+id/action_fragmentCategory_to_testFragment"
+            app:destination="@id/testFragment" />
+        <action
+            android:id="@+id/action_fragmentCategory_to_termsFragment"
+            app:destination="@id/termsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSave"
+        android:name="com.example.eisenktest.FragmentSave"
+        android:label="FragmentSave" />
+    <fragment
+        android:id="@+id/fragmentInformation"
+        android:name="com.example.eisenktest.FragmentInformation"
+        android:label="FragmentInformation" />
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.eisenktest.TestFragment"
+        android:label="TestFragment" />
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.example.eisenktest.TermsFragment"
+        android:label="TermsFragment" >
+        <action
+            android:id="@+id/action_termsFragment_to_termsMainingFragment"
+            app:destination="@id/termsMainingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsMainingFragment"
+        android:name="com.example.eisenktest.TermsMainingFragment"
+        android:label="TermsMainingFragment" >
+        <argument
+            android:name="itemView"
+            app:argType="string" />
+    </fragment>
+</navigation>
