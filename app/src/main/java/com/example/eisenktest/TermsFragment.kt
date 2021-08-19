@@ -4,9 +4,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.category_layout.view.*
+import com.example.eisenktest.data.MyDao
 import kotlinx.android.synthetic.main.terms_layout.*
-import kotlinx.android.synthetic.main.test_layout.*
 
 class TermsFragment:Fragment(R.layout.terms_layout) {
     lateinit var dao : MyDao

@@ -1,4 +1,4 @@
-package com.example.eisenktest
+package com.example.eisenktest.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.eisenktest.data.User
+import com.example.eisenktest.data.TermsModel
 import kotlinx.android.synthetic.main.category_layout.*
 
 class FragmentCategory : Fragment(R.layout.category_layout) {

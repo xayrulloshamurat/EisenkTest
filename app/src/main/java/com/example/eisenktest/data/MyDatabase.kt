@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.eisenktest.data.MyDao
+import com.example.eisenktest.data.TermsModel
 import com.example.eisenktest.data.User
 
 @Database(entities = [User::class, TermsModel::class], version = 1)
@@ -23,5 +25,5 @@ abstract  class MyDatabase:RoomDatabase() {
             return INSTANCE
         }
     }
-    abstract fun questionsDao():MyDao
+    abstract fun questionsDao(): MyDao
 }

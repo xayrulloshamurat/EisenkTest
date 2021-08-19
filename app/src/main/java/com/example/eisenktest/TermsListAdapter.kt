@@ -4,8 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.eisenktest.data.User
-import kotlinx.android.synthetic.main.category_layout.view.*
+import com.example.eisenktest.data.TermsModel
 import kotlinx.android.synthetic.main.item_terms.view.*
 
 class TermsListAdapter : RecyclerView.Adapter<TermsListAdapter.TermsListViewHolder>() {
@@ -15,7 +14,7 @@ class TermsListAdapter : RecyclerView.Adapter<TermsListAdapter.TermsListViewHold
             field = value
             notifyDataSetChanged()
         }
-    var onPostItemClicked : (termsModel:TermsModel) -> Unit = {}
+    var onPostItemClicked : (termsModel: TermsModel) -> Unit = {}
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TermsListViewHolder {
