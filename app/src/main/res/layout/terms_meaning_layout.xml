@@ -2,15 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CB000000"
+    android:background="#37000000"
     >
-    <TextView
-        android:id="@+id/meaning"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="25sp"
-        android:textColor="@color/white"
-        android:padding="16dp"
-        android:gravity="start"
-        />
+   <ScrollView
+       android:id="@+id/scroll"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_margin="16dp"
+       >
+       <TextView
+           android:id="@+id/meaning"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:textSize="25sp"
+           android:textColor="@color/black"
+           android:padding="16dp"
+           android:gravity="start"
+           android:background="@drawable/size"
+           />
+   </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

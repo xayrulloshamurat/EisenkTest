@@ -8,5 +8,6 @@ data class TermsModel(
     @PrimaryKey(autoGenerate = true)
     val id : Int,
     var word : String,
-    var meaning : String
+    var meaning : String,
+    var isFavourite: Boolean
 )

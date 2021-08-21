@@ -2,21 +2,29 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <item
-        android:id="@+id/fragmentCategory"
-        android:title="Kategoriyalar"
+        android:id="@+id/testFragment"
+        android:title="Testlar"
         android:icon="@drawable/ic_baseline_toc_24"
         />
 
     <item
-        android:id="@+id/fragmentSave"
-        android:title="Tanlanganlar"
-        android:icon="@drawable/ic_baseline_bookmark_24"
+        android:id="@+id/termsFragment"
+        android:title="Atamalar"
+        android:icon="@drawable/ic_baseline_import_contacts_24"
         />
 
     <item
-        android:id="@+id/fragmentInformation"
-        android:title="Biz haqqimizda"
-        android:icon="@drawable/ic_baseline_people_24"
+        android:id="@+id/fragmentAforizm"
+        android:title="Aforizmlar"
+        android:icon="@drawable/ic_baseline_emoji_objects_24"
         />
+    <item
+        android:id="@+id/fragmentFavourite"
+        android:title="Tanlanganlar"
+        android:icon="@drawable/ic_baseline_bookmark_24"/>
+    <item
+        android:id="@+id/fragmentWe"
+        android:title="Biz haqqimizda"
+        android:icon="@drawable/ic_baseline_people_24"/>
 
 </menu>

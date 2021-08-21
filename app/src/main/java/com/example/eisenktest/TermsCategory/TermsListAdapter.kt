@@ -1,9 +1,10 @@
-package com.example.eisenktest
+package com.example.eisenktest.TermsCategory
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.eisenktest.R
 import com.example.eisenktest.data.TermsModel
 import kotlinx.android.synthetic.main.item_terms.view.*
 
