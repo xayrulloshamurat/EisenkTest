@@ -9,5 +9,5 @@ data class TermsModel(
     val id : Int,
     var word : String,
     var meaning : String,
-    var isFavourite: Boolean
+    var isFavourite: Int
 )

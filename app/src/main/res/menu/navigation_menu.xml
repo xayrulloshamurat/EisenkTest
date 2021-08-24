@@ -14,12 +14,12 @@
         />
 
     <item
-        android:id="@+id/fragmentAforizm"
+        android:id="@+id/aforizmAuthorFragment"
         android:title="Aforizmlar"
         android:icon="@drawable/ic_baseline_emoji_objects_24"
         />
     <item
-        android:id="@+id/fragmentFavourite"
+        android:id="@+id/selectedFragment"
         android:title="Tanlanganlar"
         android:icon="@drawable/ic_baseline_bookmark_24"/>
     <item

@@ -25,5 +25,28 @@
         <argument
             android:name="word"
             app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedFragment"
+        android:name="com.example.eisenktest.selected.SelectedFragment"
+        android:label="SelectedFragment" />
+    <fragment
+        android:id="@+id/aforizmAuthorFragment"
+        android:name="com.example.eisenktest.aforizmAuthor.AforizmAuthorFragment"
+        android:label="AforizmAuthorFragment" >
+        <action
+            android:id="@+id/action_aforizmAuthorFragment_to_aforizmFragment"
+            app:destination="@id/aforizmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aforizmFragment"
+        android:name="com.example.eisenktest.aforizm.AforizmFragment"
+        android:label="AforizmFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
     </fragment>
 </navigation>

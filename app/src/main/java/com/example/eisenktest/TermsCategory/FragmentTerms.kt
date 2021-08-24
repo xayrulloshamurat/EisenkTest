@@ -21,7 +21,7 @@ class FragmentTerms:Fragment(R.layout.terms_layout) {
         setData()
         adapter.onPostItemClicked = {
             termsModel ->
-            val action = FragmentTermsDirections.actionTermsFragmentToTermsMainingFragment(termsModel.meaning,termsModel.word)
+            val action = FragmentTermsDirections.actionTermsFragmentToTermsMainingFragment(termsModel.meaning,termsModel.word, termsModel.id)
            findNavController().navigate(action)
         }
         editText.addTextChangedListener {

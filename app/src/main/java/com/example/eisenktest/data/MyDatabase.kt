@@ -4,11 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.eisenktest.data.MyDao
-import com.example.eisenktest.data.TermsModel
-import com.example.eisenktest.data.User
+import com.example.eisenktest.data.*
 
-@Database(entities = [User::class, TermsModel::class], version = 1)
+@Database(entities = [User::class, TermsModel::class, AforizmAuthorModel::class , AforizmModel::class], version = 1)
 abstract  class MyDatabase:RoomDatabase() {
     companion object{
         lateinit var INSTANCE : MyDatabase
