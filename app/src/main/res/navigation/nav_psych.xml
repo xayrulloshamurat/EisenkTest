@@ -49,4 +49,8 @@
             android:name="id"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/weFragment"
+        android:name="com.example.eisenktest.WeFragment"
+        android:label="WeFragment" />
 </navigation>

@@ -8,5 +8,5 @@ data class AforizmModel(
     @PrimaryKey
     val id: Int,
     var aforizmText: String,
-    var authorId : Int
+    var authorId: Int
 )

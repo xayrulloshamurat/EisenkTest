@@ -4,10 +4,10 @@ import androidx.room.Embedded
 import androidx.room.Relation
 
 data class AforizmAuthorWithAforizm(
-    @Embedded val aforizmAuthorModel: AforizmAuthorModel,
+    @Embedded val aforizmModel: AforizmModel,
     @Relation(
-        parentColumn = "id",
-        entityColumn = "authorId"
+        parentColumn = "authorId",
+        entityColumn = "id"
     )
-    val aforizmModel: AforizmModel
+    val aforizmAuthorModel: AforizmAuthorModel
 )

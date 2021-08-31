@@ -2,6 +2,7 @@ package com.example.eisenktest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_psych.*
@@ -14,5 +15,6 @@ class Psych : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
         bottomNav.setupWithNavController(navController)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimaryDark)
     }
 }

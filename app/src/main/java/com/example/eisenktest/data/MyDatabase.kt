@@ -6,12 +6,15 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.eisenktest.data.*
 
-@Database(entities = [User::class, TermsModel::class, AforizmAuthorModel::class , AforizmModel::class], version = 1)
-abstract  class MyDatabase:RoomDatabase() {
-    companion object{
-        lateinit var INSTANCE : MyDatabase
-        fun getInstance(context: Context):MyDatabase{
-            if(!::INSTANCE.isInitialized){
+@Database(
+    entities = [User::class, TermsModel::class, AforizmAuthorModel::class, AforizmModel::class],
+    version = 1
+)
+abstract class MyDatabase : RoomDatabase() {
+    companion object {
+        lateinit var INSTANCE: MyDatabase
+        fun getInstance(context: Context): MyDatabase {
+            if (!::INSTANCE.isInitialized) {
                 INSTANCE = Room.databaseBuilder(
                     context,
                     MyDatabase::class.java, "questions-database"

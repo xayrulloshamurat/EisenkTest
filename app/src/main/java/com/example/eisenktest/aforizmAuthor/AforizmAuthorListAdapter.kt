@@ -8,20 +8,20 @@ import com.example.eisenktest.R
 import com.example.eisenktest.data.AforizmAuthorModel
 import kotlinx.android.synthetic.main.item_author_aforizm.view.*
 
-class AforizmAuthorListAdapter: RecyclerView.Adapter<AforizmAuthorListAdapter.AforizmAuthorListViewHolder>() {
+class AforizmAuthorListAdapter :
+    RecyclerView.Adapter<AforizmAuthorListAdapter.AforizmAuthorListViewHolder>() {
 
-    var models : List<AforizmAuthorModel> = listOf()
-    set(value) {
-        field = value
-        notifyDataSetChanged()
-    }
-    var onPostItemClicked : (aforizmAuthorModel:AforizmAuthorModel) -> Unit = {}
+    var models: List<AforizmAuthorModel> = listOf()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
+    var onPostItemClicked: (aforizmAuthorModel: AforizmAuthorModel) -> Unit = {}
 
 
-
-    inner class AforizmAuthorListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        fun populateModel(aforizmAuthorModel: AforizmAuthorModel){
-          itemView.aforizmAuthorText.text = aforizmAuthorModel.authorName
+    inner class AforizmAuthorListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun populateModel(aforizmAuthorModel: AforizmAuthorModel) {
+            itemView.aforizmAuthorText.text = aforizmAuthorModel.authorName
             itemView.setOnClickListener {
                 onPostItemClicked.invoke(aforizmAuthorModel)
             }
@@ -29,7 +29,8 @@ class AforizmAuthorListAdapter: RecyclerView.Adapter<AforizmAuthorListAdapter.Af
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AforizmAuthorListViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.item_author_aforizm, parent, false)
+        var view =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_author_aforizm, parent, false)
         return AforizmAuthorListViewHolder(view)
     }
 

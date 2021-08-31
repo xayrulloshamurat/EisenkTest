@@ -1,20 +1,24 @@
 package com.example.eisenktest.TermsCategory
 
+import android.animation.ValueAnimator
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.airbnb.lottie.LottieAnimationView
 import com.example.eisenktest.MyDatabase
 import com.example.eisenktest.R
 import com.example.eisenktest.data.MyDao
+import com.example.eisenktest.data.TermsModel
 import kotlinx.android.synthetic.main.terms_meaning_layout.*
+
 
 class TermsMainingFragment : Fragment(R.layout.terms_meaning_layout) {
     private val safeArgs: TermsMainingFragmentArgs by navArgs()
 
-    lateinit var dao: MyDao
-
+    private lateinit var dao: MyDao
     private lateinit var menuItem: MenuItem
+    private lateinit var termsId: TermsModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,15 +29,21 @@ class TermsMainingFragment : Fragment(R.layout.terms_meaning_layout) {
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        meaning.text = safeArgs.meaning
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         dao = MyDatabase.getInstance(requireContext()).questionsDao()
+        termsId = dao.searchById(safeArgs.id)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        meaning.text = safeArgs.meaning
         super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.favourite_terms_menu, menu)
-        menuItem = menu?.findItem(R.id.item_bookmark)
+        menuItem = menu.findItem(R.id.item_bookmark)
         setFavouriteIcon()
         super.onCreateOptionsMenu(menu, inflater)
     }
@@ -46,19 +56,20 @@ class TermsMainingFragment : Fragment(R.layout.terms_meaning_layout) {
     }
 
     private fun setFavourite() {
-
-        var termsId = dao.searchById(safeArgs.id)
-        if(termsId.isFavourite == 0) termsId.isFavourite =1
-        else termsId.isFavourite = 1 - termsId.isFavourite!!
+        if (termsId.isFavourite == 0) termsId.isFavourite = 1
+        else termsId.isFavourite = 1 - termsId.isFavourite
         setFavouriteIcon()
+
         dao.updateTerms(termsId)
     }
-    private fun setFavouriteIcon(){
-        var termsId = dao.searchById(safeArgs.id)
-        if(termsId.isFavourite == 1){
-            menuItem?.setIcon(R.drawable.ic_baseline_bookmark_24)
-        }else{
-            menuItem?.setIcon(R.drawable.ic_baseline_bookmark_border_24)
+
+    private fun setFavouriteIcon() {
+        if (termsId.isFavourite == 1) {
+            menuItem.setIcon(R.drawable.ic_baseline_bookmark_24)
+            animation_view.playAnimation()
+        } else {
+            menuItem.setIcon(R.drawable.ic_baseline_bookmark_border_24)
+            animation_view.pauseAnimation()
         }
     }
 }

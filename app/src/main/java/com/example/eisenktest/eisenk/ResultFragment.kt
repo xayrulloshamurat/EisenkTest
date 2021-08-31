@@ -20,43 +20,51 @@ class ResultFragment : Fragment(R.layout.result_layout) {
 
 
         extravertItem.text = "Extrovert/Introvert:${safeArgs.extravert}"
-        if(safeArgs.extravert >=0 && safeArgs.extravert<=10){
+        if (safeArgs.extravert >= 0 && safeArgs.extravert <= 10) {
             extravertInformation.text = "Siz introvertsiz, ichingizda yopiqsiz!"
-        }else if(safeArgs.extravert>=11 && safeArgs.extravert<=14){
+        } else if (safeArgs.extravert >= 11 && safeArgs.extravert <= 14) {
             extravertInformation.text = "Siz ambivertsiz, kerak bo'lganda muloqot qilasiz"
-        }else if(safeArgs.extravert >=15 && safeArgs.extravert<=24){
-            extravertInformation.text = "Siz ekstrovertsiz, chiquvchi, tashqi olam bilan tez kirishasiz"
+        } else if (safeArgs.extravert >= 15 && safeArgs.extravert <= 24) {
+            extravertInformation.text =
+                "Siz ekstrovertsiz, chiquvchi, tashqi olam bilan tez kirishasiz"
         }
 
         neurotizmItem.text = "Neurotizm : ${safeArgs.neurotizm}"
-        if(safeArgs.neurotizm >= 0 && safeArgs.neurotizm <= 10){
+        if (safeArgs.neurotizm >= 0 && safeArgs.neurotizm <= 10) {
             neurotizmInformation.text = "Sizda hissiy barqarorlik bor"
-        }else if(safeArgs.neurotizm >=11 && safeArgs.neurotizm <=16){
+        } else if (safeArgs.neurotizm >= 11 && safeArgs.neurotizm <= 16) {
             neurotizmInformation.text = "Siz hissiyotlarga moyil , beriluvchan shaxssiz"
-        }else if(safeArgs.neurotizm >=17 && safeArgs.neurotizm<=22){
+        } else if (safeArgs.neurotizm >= 17 && safeArgs.neurotizm <= 22) {
             neurotizmInformation.text = "Sizda asab tizimi chayqalishining individual belgilari bor"
-        }else if(safeArgs.neurotizm >=23 && safeArgs.neurotizm<=24){
-            neurotizmInformation.text = "Sizda patalogiya bilan chegaralangan nevrotikizm, buzilish , nevroz bo'lishi mumkin"
+        } else if (safeArgs.neurotizm >= 23 && safeArgs.neurotizm <= 24) {
+            neurotizmInformation.text =
+                "Sizda patalogiya bilan chegaralangan nevrotikizm, buzilish , nevroz bo'lishi mumkin"
         }
         lieItem.text = "Yolg'on shkalasi: ${safeArgs.lie}"
-        if(safeArgs.lie >=0 && safeArgs.lie <=3){
+        if (safeArgs.lie >= 0 && safeArgs.lie <= 3) {
             lieInformation.text = "Javoblarga ishonish mumkin!"
             lieScore = true
-        }else if(safeArgs.lie>=4&& safeArgs.lie<=5){
+        } else if (safeArgs.lie >= 4 && safeArgs.lie <= 5) {
             lieScore = true
-            lieInformation.text = "Bergan javoblaringiz shubhali. Testni qaytadan ishlash tavsiya qilinadi"
-        }else if(safeArgs.lie >=6 && safeArgs.lie <=9){
-            lieInformation.text = "Siz haqiqatni yolg'on bilan bezashga qiziqasiz. Testni qaytadan ishlang. Yolg'onlardan foydalanmang"
+            lieInformation.text =
+                "Bergan javoblaringiz shubhali. Testni qaytadan ishlash tavsiya qilinadi"
+        } else if (safeArgs.lie >= 6 && safeArgs.lie <= 9) {
+            lieInformation.text =
+                "Siz haqiqatni yolg'on bilan bezashga qiziqasiz. Testni qaytadan ishlang. Yolg'onlardan foydalanmang"
         }
 
-        if (lieScore == true){
+        if (lieScore == true) {
             information.isVisible = true
-        }else{
+        } else {
             information.isVisible = false
         }
 
         information.setOnClickListener {
-            val actions  = ResultFragmentDirections.actionResultFragmentToInformationFragment(safeArgs.extravert, safeArgs.neurotizm, safeArgs.lie)
+            val actions = ResultFragmentDirections.actionResultFragmentToInformationFragment(
+                safeArgs.extravert,
+                safeArgs.neurotizm,
+                safeArgs.lie
+            )
             findNavController().navigate(actions)
         }
 

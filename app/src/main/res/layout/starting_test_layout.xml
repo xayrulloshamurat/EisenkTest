@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backround"
+    android:background= "@drawable/stickers"
+    android:padding="20dp"
     >
 
-<TextView
-    android:id="@+id/instructionsMain"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/start"
-    android:gravity="center"
-    android:text="Britaniyalik G.Y.Ayzenk tomonidan ishlab chiqilgan testga xush kelibsiz! Sizga hozir 57 ta savoldan iborat test taklif qilinadi. Siz ushbu savollarga faqat 'Ha' yoki 'Yo'q' deb javob berishingiz lozim. Savollarning 'yaxshi' yoki 'yomoni' yo'q. Shuning uchun ko'p o'ylamasdan javob berishga harakat qiling."
-    android:textColor="@color/white"
-    android:textSize="25sp"
-    android:padding="25dp"
-    android:background="@drawable/shape"
+    <TextView
+        android:id="@+id/textInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Britaniyalik G.Y.Ayzenk tomonidan ishlab chiqilgan testga xush kelibsiz! Sizga hozir 57 ta savoldan iborat test taklif qilinadi. Siz ushbu savollarga faqat 'Ha' yoki 'Yo'q' deb javob berishingiz lozim. Savollarning 'yaxshi' yoki 'yomoni' yo'q . Shuning uchun ko'p o'ylamasdan javob berishga harakat qiling. "
+        app:layout_constraintBottom_toTopOf="@id/start"
+        android:textColor="@color/black"
+        android:background="@drawable/backround_quiz"
+        android:padding="16dp"
+        />
 
-    />
 <Button
     android:id="@+id/start"
     android:layout_width="wrap_content"
@@ -32,8 +33,9 @@
     app:layout_constraintBottom_toBottomOf="parent"
     android:textSize="25sp"
     android:text="Testni boshlash"
-    android:background="@drawable/shape"
     android:layout_margin="16dp"
+    android:textColor="@color/white"
+    android:background="@drawable/circle"
     />
 
 

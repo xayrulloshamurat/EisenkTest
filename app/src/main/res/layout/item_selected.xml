@@ -9,7 +9,7 @@
         android:id="@+id/selectedView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/size"
+        android:background="@drawable/shape"
         android:padding="16dp"
         android:text="Xayrullo"
         android:textColor="@color/black"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backround">
+    android:background="@drawable/stickers">
 
     <TextView
         android:id="@+id/result"
@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="35sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_margin="16dp"
         android:text="Natija:"
         android:textStyle="bold"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@id/result"
         android:layout_margin="16dp"
         android:textSize="35sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:background="@drawable/shape"
         android:gravity="center"
         />
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/extravertItem"
         android:textSize="16sp"
         android:layout_margin="16dp"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@id/extravertInformation"
         android:layout_margin="16dp"
         android:textSize="35sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:background="@drawable/shape"
         android:gravity="center"
         />
@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/neurotizmItem"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:layout_margin="16dp"
         android:textStyle="italic"
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@id/neurotizmInformation"
         android:layout_margin="16dp"
         android:textSize="35sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:background="@drawable/shape"
         android:gravity="center"
 
@@ -96,7 +96,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lieItem"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:layout_margin="16dp"
         android:textStyle="italic"
@@ -111,7 +111,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="To'liq ma'lumot"
         android:textSize="25sp"
-        android:background="@drawable/shape"
+        android:textColor="@color/white"
+        android:background="@color/black"
         android:layout_margin="16dp"
         android:visibility="gone"
         />

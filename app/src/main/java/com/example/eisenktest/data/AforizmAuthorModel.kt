@@ -6,6 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "aforizmAuthor")
 data class AforizmAuthorModel(
     @PrimaryKey(autoGenerate = true)
-    val id : Int ,
+    val id: Int,
     var authorName: String
 )

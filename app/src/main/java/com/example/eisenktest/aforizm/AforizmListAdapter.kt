@@ -20,9 +20,9 @@ class AforizmListAdapter : RecyclerView.Adapter<AforizmListAdapter.AforizmListVi
 
     inner class AforizmListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun populateModel(models: AforizmAuthorWithAforizm) {
-            if(models.aforizmModel.authorId == models.aforizmAuthorModel.id){
-                itemView.aforizmText.text = models.aforizmModel.aforizmText
-            }
+
+            itemView.aforizmText.text = models.aforizmModel.aforizmText
+            itemView.aforizmAuthor.text = models.aforizmAuthorModel.authorName
         }
     }
 

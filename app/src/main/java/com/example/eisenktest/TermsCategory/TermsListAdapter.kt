@@ -15,11 +15,12 @@ class TermsListAdapter : RecyclerView.Adapter<TermsListAdapter.TermsListViewHold
             field = value
             notifyDataSetChanged()
         }
-    var onPostItemClicked : (termsModel: TermsModel) -> Unit = {}
+    var onPostItemClicked: (termsModel: TermsModel) -> Unit = {}
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TermsListViewHolder {
-        val itemview = LayoutInflater.from(parent.context).inflate(R.layout.item_terms, parent, false)
+        val itemview =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_terms, parent, false)
         return TermsListViewHolder(itemview)
     }
 
@@ -32,9 +33,9 @@ class TermsListAdapter : RecyclerView.Adapter<TermsListAdapter.TermsListViewHold
 
     inner class TermsListViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
         fun populateModel(termsModel: TermsModel) {
-           itemView.termsView.text = termsModel.word
+            itemView.termsView.text = termsModel.word
             itemView.setOnClickListener {
-               onPostItemClicked.invoke(termsModel)
+                onPostItemClicked.invoke(termsModel)
             }
         }
     }

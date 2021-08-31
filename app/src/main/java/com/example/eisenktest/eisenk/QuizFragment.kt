@@ -82,7 +82,7 @@ class QuizFragment : Fragment(R.layout.quiz_layout) {
                 score++
                 questionPlace.text = massiv[score].questions
             }
-            scoreItem.text =  "${score + 1}/ 57"
+            scoreItem.text = "${score + 1}/ 57"
         }
     }
 }
