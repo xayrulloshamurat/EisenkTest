@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_psych"
     app:startDestination="@id/testFragment">
     <fragment
@@ -53,4 +54,24 @@
         android:id="@+id/weFragment"
         android:name="com.example.eisenktest.WeFragment"
         android:label="WeFragment" />
+    <fragment
+        android:id="@+id/startingTestFragment"
+        android:name="com.example.eisenktest.eisenk.StartingTestFragment"
+        android:label="StartingTestFragment" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.eisenktest.eisenk.QuizFragment"
+        android:label="QuizFragment" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.eisenktest.eisenk.ResultFragment"
+        android:label="ResultFragment" />
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.example.eisenktest.eisenk.InformationFragment"
+        android:label="InformationFragment" >
+        <action
+            android:id="@+id/action_informationFragment_to_testFragment"
+            app:destination="@id/testFragment" />
+    </fragment>
 </navigation>

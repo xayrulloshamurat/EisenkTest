@@ -1,19 +1,21 @@
 package com.example.eisenktest.eisenk
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.eisenktest.R
 import kotlinx.android.synthetic.main.information_layout.*
 
-class InformationFragment : Fragment(R.layout.information_layout) {
+ class InformationFragment : Fragment(R.layout.information_layout), IOnBackPresssed {
     private val safeArgs: InformationFragmentArgs by navArgs()
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         (0..24).forEach { i ->
             if (safeArgs.extravert <= 12 && safeArgs.neurotizm <= 12) {
                 result.text = "Siz FLEGMATIKsiz"
@@ -37,4 +39,9 @@ class InformationFragment : Fragment(R.layout.information_layout) {
             findNavController().navigate(R.id.action_informationFragment_to_startingTestFragment)
         }
     }
+
+     override fun onBackPressed(): Boolean {
+         findNavController().navigate(R.id.action_informationFragment_to_testFragment)
+         return true
+     }
 }
