@@ -12,7 +12,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.eisenktest.R
 import kotlinx.android.synthetic.main.information_layout.*
 
- class InformationFragment : Fragment(R.layout.information_layout), IOnBackPresssed {
+ class InformationFragment : Fragment(R.layout.information_layout){
     private val safeArgs: InformationFragmentArgs by navArgs()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -39,9 +39,8 @@ import kotlinx.android.synthetic.main.information_layout.*
             findNavController().navigate(R.id.action_informationFragment_to_startingTestFragment)
         }
     }
-
-     override fun onBackPressed(): Boolean {
-         findNavController().navigate(R.id.action_informationFragment_to_testFragment)
-         return true
-     }
+//     override fun onBackPressed(): Boolean {
+//         findNavController().navigate(R.id.action_informationFragment_to_testFragment)
+//         return true
+//     }
 }

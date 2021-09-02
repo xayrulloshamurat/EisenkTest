@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center"
-        android:text="Bu dastur TexnoPOS IT maktabi o'quvchisi Xayrullo Shamuratov tomonidan ishlab chiqildi. Dastur bo'yicha taklif va fikrlar bo'lsa shamuratovxayrullo@gmail.com elektron pochtasiga jo'natishingiz mumkin. Xato va kamchiliklar uchun oldindan uzr."
+        android:text="Bu dastur TexnoPOS IT maktabi o'quvchisi  Xayrullo Shamuratov  tomonidan ishlab chiqildi. Dastur bo'yicha taklif va fikrlar bo'lsa shamuratovxayrullo@gmail.com elektron pochtasiga jo'natishingiz mumkin. Xato va kamchiliklar uchun oldindan uzr."
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

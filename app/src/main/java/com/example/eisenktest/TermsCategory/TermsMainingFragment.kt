@@ -66,10 +66,10 @@ class TermsMainingFragment : Fragment(R.layout.terms_meaning_layout) {
     private fun setFavouriteIcon() {
         if (termsId.isFavourite == 1) {
             menuItem.setIcon(R.drawable.ic_baseline_bookmark_24)
-            animation_view.playAnimation()
+//            animation_view.playAnimation()
         } else {
             menuItem.setIcon(R.drawable.ic_baseline_bookmark_border_24)
-            animation_view.pauseAnimation()
+//            animation_view.pauseAnimation()
         }
     }
 }
