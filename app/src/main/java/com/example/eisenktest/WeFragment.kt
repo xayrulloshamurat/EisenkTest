@@ -34,9 +34,8 @@ class WeFragment : Fragment(R.layout.we_layout) {
             val instagram = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/xayrullo.shamuratov"))
             startActivity(instagram)
         }
-        val sourceString = "<b>$id</b> $weText"
         weText.setText(Html.fromHtml("Bu dastur <b>TexnoPOS IT </b> maktabi o'quvchisi  <b>Xayrullo Shamuratov</b>  tomonidan ishlab chiqildi. Dastur bo'yicha taklif va fikrlar bo'lsa shamuratovxayrullo@gmail.com elektron pochtasiga jo'natishingiz mumkin. <b> Xato va kamchiliklar uchun oldindan uzr.</b>"))
-//        weText.setText(Html.fromHtml("Siz <b> Xayrullo Shamuratovsiz! </b>"))
+
         super.onViewCreated(view, savedInstanceState)
     }
 }
